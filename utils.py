@@ -25,8 +25,6 @@ Es decir, si la función recibe como parámetro 0, 1 y 5, debería devolver Fals
 Si recibe como parámetro 2, 1 y 3, debería devolver True porque 2 está entre 1 y 3.
 '''
 
-
-
 def param (parametro, num1, num2):
     if parametro > num1 and parametro < num2:
         return True
@@ -34,7 +32,7 @@ def param (parametro, num1, num2):
         return False
 
 # print(param(7, 1, 6))   --> Probando que funcione. En este caso arrojara un False dado que 7 no esta entre 1 y 6
-# print(param(2, 1, 3))   --> Probando que funcione. En este caso arrojara un False dado que 7 no esta entre 1 y 6
+# print(param(2, 1, 3))   --> Probando que funcione. En este caso arrojara un True dado que 2 si esta entre 1 y 6
 
 #Valor1: parametro  
 #Valor2: primer numero  
