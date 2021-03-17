@@ -37,3 +37,22 @@ def param (parametro, num1, num2):
 #Valor1: parametro  
 #Valor2: primer numero  
 #Valor3: segundo numero
+
+
+
+#Ejercicio 3:
+'''
+Dentro del mismo script, desarrollar una función que lea un valor ingresado por el usuario, intente convertirlo en número y, además,
+lo valide utilizando la función anterior. En caso de que el valor no sea válido, debe devolver None. Además, debe permitir personalizar el 
+mensaje en el que se le pide al usuario que ingrese un valor.
+'''
+
+mensajeTeclado = input('Bienvenido, por favor ingrese el numero que desee convertir a Int: ')
+
+def lectureMessage (mensaje):
+    return int(mensajeTeclado)
+   
+print(type(mensajeTeclado))
+
+
+
