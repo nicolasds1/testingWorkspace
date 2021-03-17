@@ -30,8 +30,8 @@ en caso de que el valor de la matriz sea menor a 2, debe mostrar un guión. Si e
     8.b) Tras crear la matriz con el tamaño elegido por el usuario, deberá pedírsele ahora al mismo que ingrese una coordenada X y una coordenada Y, 
          y hacer visible ese valor en el tablero.
     8.c) Repetir la acción del punto anterior tantas veces como casilleros tenga el tablero a lo ancho
-     (es decir, para un tablero de 3x3, hay que repetir el punto 8.b 3 veces). 
-      Si se ingresa un valor inválido o una coordenada que ya había sido revelada, no cuenta como una de esas veces.
+        (es decir, para un tablero de 3x3, hay que repetir el punto 8.b 3 veces). 
+        Si se ingresa un valor inválido o una coordenada que ya había sido revelada, no cuenta como una de esas veces.
     8.d) Solicitar al usuario que intente adivinar el porcentaje de "1" que hay en el tablero, con un margen de error de +/- 5%. 
 
 Comentarle al usuario si adivinó o no, y mostrar el tablero completamente descubierto.
