@@ -24,15 +24,23 @@ Dentro del mismo script, escribir una función que determine si un valor está e
 Es decir, si la función recibe como parámetro 0, 1 y 5, debería devolver False puesto que 0 no está entre 1 y 5. 
 Si recibe como parámetro 2, 1 y 3, debería devolver True porque 2 está entre 1 y 3.
 '''
+class Father:
+    def __init__ (self, parametro, num1, num2):
+        self.parametro = parametro
+        self.num1 = num1
+        self.num2 = num2
 
-def param (parametro, num1, num2):
-    if parametro > num1 and parametro < num2:
-        return True
-    else:
-        return False
+    def check (self):
+        if self.parametro > self.num1 and self.parametro < self.num2:
+            return True #utilice return asi no imprime nada en pantalla, para probar que funcione cambiarlo por un print()
+        else:
+            return False #utilice return asi no imprime nada en pantalla, para probar que funcione cambiarlo por un print()
 
-# print(param(7, 1, 6))   --> Probando que funcione. En este caso arrojara un False dado que 7 no esta entre 1 y 6
-# print(param(2, 1, 3))   --> Probando que funcione. En este caso arrojara un True dado que 2 si esta entre 1 y 6
+checking = Father(7, 1, 6)
+checking.check() #  --> Probando que funcione. En este caso arrojara un False dado que 7 no esta entre 1 y 6
+
+checking2 = Father(2, 1, 3)
+checking2.check() # --> Probando que funcione. En este caso arrojara un True dado que 2 si esta entre 1 y 6
 
 #Valor1: parametro  
 #Valor2: primer numero  
@@ -47,12 +55,32 @@ Dentro del mismo script, desarrollar una función que lea un valor ingresado por
 lo valide utilizando la función anterior. En caso de que el valor no sea válido, debe devolver None. Además, debe permitir personalizar el 
 mensaje en el que se le pide al usuario que ingrese un valor.
 '''
-def numbConversion ():
-    num = input('Number: ')
-    strToInt = int(num) #cambio el valor de Str a Int
-    print(type(strToInt)) #imprime que tipo de dato es
 
-numbConversion()     
+class Main:
+    def __init__ (self, num):
+        self.num = num
+        
+    def conversor(self):
+        print('Numero ingresado:', self.num, '. Su tipo de dato es:')
+        print(type(self.num)) #chequeamos que es un str
 
- 
-    
+        changer = int(self.num)
+        print('\nNumero transformado a Int! Su tipo de dato ahora es:')
+        print(type(changer)) #verificamos que el cambio fue correcto, de str a int :D
+
+finalPrint = Main('10') #Ingresamos 10, el cual tiene valor Str inicialmente, pero terminara siendo Int
+finalPrint.conversor()
+
+
+class Son (Father, Main):
+    def __init__(self, finalPrint):
+        self.finalPrint = finalPrint
+
+    def testing (self):
+        if finalPrint > self.num1 and finalPrint < self.num2:
+            print(True)
+        else:
+            print(None)    
+
+endEx = Son(finalPrint) #ERROR: 'Son' object has no attribute 'num1' => A ver como lo solucionamos...
+endEx.testing()
